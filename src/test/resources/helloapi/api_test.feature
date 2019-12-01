@@ -1,3 +1,4 @@
+@http
 Feature: hello world
   This is a the first feature for pandaria
 
