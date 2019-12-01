@@ -4,7 +4,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin={"json:target/cucumber/cucumber.json", "html:target/cucumber", "pretty"},
+//        plugin={"json:target/cucumber/cucumber.json", "html:target/cucumber", "pretty"},
+        plugin = { "de.monochromata.cucumber.report.PrettyReports:target/cucumber" },
         features={"src/test/resources/"},
         glue = {"cucumber.api.spring",
                 "hellocucumber",
