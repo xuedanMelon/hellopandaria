@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         glue = {"cucumber.api.spring",
                 "hellocucumber",
                 "com.github.jakimli.pandaria.hooks",
-                "com.github.jakimli.pandaria"},
+                "com.github.jakimli.pandaria",
+                "hooks"},
         tags = {"not @ignore"}
 )
 public class RunCucumberTest {
