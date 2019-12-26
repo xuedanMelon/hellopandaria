@@ -2,16 +2,19 @@
 Feature: hello world
   This is a the first feature for pandaria
 
-  Scenario: hello world
-    * uri: https://github.com
-    * send: GET
-    * status: 200
+#  Scenario: hello world
+#    * uri: https://github.com
+#    * send: GET
+#    * status: 200
 
   Scenario: test response json value
     * uri: http://localhost:5000/users/me
     * send: GET
     * status: 200
-    * verify: '$.name'='xuedan'
+    * var: 'xing'='xue'
+    * var: 'ming'='dan'
+    * var: 'name'="${xing}" + "${ming}"
+    * verify: '$.name'="${name}"
     * verify: '$.age'=18
 
 #  Scenario: test request token

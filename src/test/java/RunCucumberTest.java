@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
         plugin = { "de.monochromata.cucumber.report.PrettyReports:target/cucumber" },
         features={"src/test/resources/"},
         glue = {"cucumber.api.spring",
+                "helloapi",
                 "hellocucumber",
                 "com.github.jakimli.pandaria.hooks",
                 "com.github.jakimli.pandaria",
