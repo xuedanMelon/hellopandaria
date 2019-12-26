@@ -10,6 +10,16 @@ public class HelloApi  {
 
     @Given("var: {string}={string} + {string}")
     public void defineStringVariableByTwoVariables(String key, String value1, String value2) {
-        variables.assign(key, variables.interpret(value1+value2));
+        if(value1.startsWith("$") ){
+            if(value2.startsWith("$")){
+                variables.assign(key, variables.interpret(value1+value2));
+            }
+            else{
+                variables.assign(key, variables.interpret(value1)+value2);
+            }
+        }
+        else{
+            variables.assign(key, value1+value2);
+        }
     }
 }

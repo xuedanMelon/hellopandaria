@@ -13,6 +13,12 @@ Feature: hello world
     * status: 200
     * var: 'xing'='xue'
     * var: 'ming'='dan'
+    * var: 'name1'="xue" + "${ming}"
+    * verify: '$.name'="${name1}"
+    * var: 'name2'="xue" + "dan"
+    * verify: '$.name'="${name2}"
+    * var: 'name3'="${xing}" + "dan"
+    * verify: '$.name'="${name3}"
     * var: 'name'="${xing}" + "${ming}"
     * verify: '$.name'="${name}"
     * verify: '$.age'=18
